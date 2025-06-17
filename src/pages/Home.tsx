@@ -5,14 +5,18 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
+      {/* Hero Section with Tagline */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
             TAGLINE/HEADING
           </h1>
-          <p className="text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto leading-relaxed">
+          <div className="text-xl md:text-2xl mb-8 font-light">
+            <span className="inline-block mr-8">HOME: 10:00 AM</span>
+            <span className="inline-block">SIGN: 10:00 AM</span>
+          </div>
+          <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
             Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
           </p>
         </div>
@@ -85,61 +89,93 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Reach Out to Us Section - Table Format */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-blue-600 mb-12 text-center">REACH OUT TO US</h2>
           
-          <div className="max-w-2xl mx-auto">
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">EMAIL</label>
-                  <input 
-                    type="email" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">PHONE</label>
-                  <input 
-                    type="tel" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your phone"
-                  />
-                </div>
-              </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white border border-gray-300 rounded-lg overflow-hidden">
+              <table className="w-full border-collapse">
+                <tbody>
+                  <tr className="border-b border-gray-300">
+                    <td className="bg-gray-50 font-semibold text-gray-700 px-6 py-4 w-1/4 border-r border-gray-300">
+                      NAME
+                    </td>
+                    <td className="px-6 py-4">
+                      <input 
+                        type="text" 
+                        placeholder="Enter your name"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <td className="bg-gray-50 font-semibold text-gray-700 px-6 py-4 w-1/4 border-r border-gray-300">
+                      EMAIL
+                    </td>
+                    <td className="px-6 py-4">
+                      <input 
+                        type="email" 
+                        placeholder="Enter your email"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <td className="bg-gray-50 font-semibold text-gray-700 px-6 py-4 w-1/4 border-r border-gray-300">
+                      PHONE
+                    </td>
+                    <td className="px-6 py-4">
+                      <input 
+                        type="tel" 
+                        placeholder="Enter your phone"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <td className="bg-gray-50 font-semibold text-gray-700 px-6 py-4 w-1/4 border-r border-gray-300">
+                      SUBJECT
+                    </td>
+                    <td className="px-6 py-4">
+                      <input 
+                        type="text" 
+                        placeholder="Enter subject"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <td className="bg-gray-50 font-semibold text-gray-700 px-6 py-4 w-1/4 border-r border-gray-300">
+                      INQUIRY
+                    </td>
+                    <td className="px-6 py-4">
+                      <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Select inquiry type</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="product">Product Information</option>
+                        <option value="support">Technical Support</option>
+                        <option value="partnership">Partnership</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="bg-gray-50 font-semibold text-gray-700 px-6 py-4 w-1/4 border-r border-gray-300 align-top">
+                      MESSAGE
+                    </td>
+                    <td className="px-6 py-4">
+                      <textarea 
+                        rows={4}
+                        placeholder="Enter your message"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                      ></textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
               
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">SUBJECT</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter subject"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">INQUIRY</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Type of inquiry"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">MESSAGE</label>
-                <textarea 
-                  rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Enter your message"
-                ></textarea>
-              </div>
-              
-              <div className="text-center">
+              <div className="bg-gray-50 px-6 py-4 text-center border-t border-gray-300">
                 <button 
                   type="submit"
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition-colors"
@@ -147,7 +183,7 @@ const Home = () => {
                   SUBMIT
                 </button>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </section>
