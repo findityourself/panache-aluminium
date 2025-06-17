@@ -3,6 +3,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const industries = [
+    {
+      title: "ARCHITECTURE & FACADE",
+      description: "Innovative solutions for modern architectural projects with cutting-edge design and functionality.",
+      image: "/lovable-uploads/2a2ebcf0-6f26-4d63-9dd2-8cb4713fb747.png"
+    },
+    {
+      title: "CONSTRUCTION",
+      description: "Heavy-duty construction equipment and machinery for large-scale industrial projects.",
+      image: "/lovable-uploads/f6c6b9e7-aa21-4830-8afe-d1deed581dc9.png"
+    },
+    {
+      title: "INDUSTRIAL",
+      description: "Advanced industrial furnaces and manufacturing equipment for precision engineering.",
+      image: "/lovable-uploads/1424d1e9-3513-4b32-89f4-6cc4eb6c6bec.png"
+    },
+    {
+      title: "ENERGY",
+      description: "Energy-efficient solutions and welding technologies for sustainable manufacturing.",
+      image: "/lovable-uploads/82d0c4f3-13b0-4f68-b1e1-8cdb528b2254.png"
+    }
+  ];
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -10,10 +33,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            TAGLINE/HEADING
+            PRECISION ENGINEERING
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto leading-relaxed">
-            Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+            Advanced industrial solutions and cutting-edge technology for modern manufacturing excellence
           </p>
         </div>
         
@@ -48,30 +71,53 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Capabilities Section */}
+      {/* WHO WE WORK WITH Section */}
       <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">WHO WE WORK WITH</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {industries.map((industry, index) => (
+              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <img 
+                  src={industry.image} 
+                  alt={industry.title} 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="font-bold text-lg text-gray-900 mb-3">{industry.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{industry.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities Section */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">CAPABILITIES</h2>
           
           <div className="grid md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-                alt="Capability 1" 
+                src="/lovable-uploads/4d239df2-a73b-4466-a274-14ae0806a69d.png" 
+                alt="Advanced Technology" 
                 className="w-full h-48 object-cover"
               />
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-                alt="Capability 2" 
+                src="/lovable-uploads/d97a93e3-8873-4937-a7e9-d321f673d889.png" 
+                alt="Precision Manufacturing" 
                 className="w-full h-48 object-cover"
               />
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-                alt="Capability 3" 
+                src="/lovable-uploads/f41e77b0-c5b7-4a46-8337-239483989c05.png" 
+                alt="Quality Equipment" 
                 className="w-full h-48 object-cover"
               />
             </div>
@@ -86,7 +132,7 @@ const Home = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-blue-600 mb-12 text-center">REACH OUT TO US</h2>
           

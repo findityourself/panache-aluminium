@@ -1,43 +1,44 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const products = [
     {
       id: 1,
-      name: "PRODUCT NAME",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      description: "Product description goes here"
+      name: "PRECISION PRISM TECHNOLOGY",
+      image: "/lovable-uploads/2a2ebcf0-6f26-4d63-9dd2-8cb4713fb747.png",
+      description: "Advanced optical precision technology for industrial applications"
     },
     {
       id: 2,
-      name: "PRODUCT NAME",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      description: "Product description goes here"
+      name: "INDUSTRIAL FURNACE SYSTEMS",
+      image: "/lovable-uploads/4d239df2-a73b-4466-a274-14ae0806a69d.png",
+      description: "High-performance furnace systems for heavy industrial processing"
     },
     {
       id: 3,
-      name: "PRODUCT NAME",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      description: "Product description goes here"
+      name: "PRECISION CUTTING TOOLS",
+      image: "/lovable-uploads/d97a93e3-8873-4937-a7e9-d321f673d889.png",
+      description: "State-of-the-art cutting and machining tools for precision manufacturing"
     },
     {
       id: 4,
-      name: "PRODUCT NAME",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      description: "Product description goes here"
+      name: "METAL FABRICATION EQUIPMENT",
+      image: "/lovable-uploads/f41e77b0-c5b7-4a46-8337-239483989c05.png",
+      description: "Professional metal fabrication and processing equipment"
     },
     {
       id: 5,
-      name: "PRODUCT NAME",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-      description: "Product description goes here"
+      name: "STRUCTURAL COMPONENTS",
+      image: "/lovable-uploads/2392bc73-dae8-40f9-8c7f-20dcd912a468.png",
+      description: "High-grade structural components for industrial construction"
     },
     {
       id: 6,
-      name: "PRODUCT NAME",
-      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
-      description: "Product description goes here"
+      name: "WELDING TECHNOLOGY",
+      image: "/lovable-uploads/f44790ab-80bd-4e9e-a77f-238988ffc0bd.png",
+      description: "Advanced welding technology and equipment for precision joining"
     }
   ];
 
@@ -68,17 +69,22 @@ const Products = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {products.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <img 
-                  src={product.image} 
-                  alt={product.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="font-bold text-lg text-gray-900 mb-2">{product.name}</h3>
-                  <p className="text-gray-600">{product.description}</p>
+              <Link key={product.id} to={`/products/${product.id}`}>
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg text-gray-900 mb-2">{product.name}</h3>
+                    <p className="text-gray-600 mb-4">{product.description}</p>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors text-sm">
+                      View Details
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -90,13 +96,13 @@ const Products = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
+                src="/lovable-uploads/82d0c4f3-13b0-4f68-b1e1-8cdb528b2254.png" 
                 alt="Featured Product"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">PRODUCT NAME</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">FEATURED TECHNOLOGY</h2>
               <div className="space-y-4 text-gray-600">
                 <p><strong>Product Category:</strong> Industrial Equipment</p>
                 <p><strong>Specifications:</strong></p>
@@ -109,10 +115,10 @@ const Products = () => {
                 <div className="flex space-x-4 mt-6">
                   <span className="text-2xl font-bold text-blue-600">1</span>
                   <div className="flex space-x-2">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Thumb 1" className="w-12 h-12 object-cover rounded" />
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Thumb 2" className="w-12 h-12 object-cover rounded" />
-                    <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" alt="Thumb 3" className="w-12 h-12 object-cover rounded" />
-                    <div className="w-12 h-12 bg-gray-200 rounded flex items-center justify-center text-sm font-semibold">+2</div>
+                    <img src="/lovable-uploads/2a2ebcf0-6f26-4d63-9dd2-8cb4713fb747.png" alt="Thumb 1" className="w-12 h-12 object-cover rounded" />
+                    <img src="/lovable-uploads/4d239df2-a73b-4466-a274-14ae0806a69d.png" alt="Thumb 2" className="w-12 h-12 object-cover rounded" />
+                    <img src="/lovable-uploads/d97a93e3-8873-4937-a7e9-d321f673d889.png" alt="Thumb 3" className="w-12 h-12 object-cover rounded" />
+                    <div className="w-12 h-12 bg-gray-200 rounded flex items-center justify-center text-sm font-semibold">+3</div>
                   </div>
                 </div>
                 <div className="mt-6">
