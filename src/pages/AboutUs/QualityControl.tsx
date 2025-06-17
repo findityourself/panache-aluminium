@@ -1,101 +1,142 @@
 
 import React from 'react';
+import { CheckCircle, Award, Shield } from 'lucide-react';
 
 const QualityControl = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section 
-        className="relative h-screen flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url('/lovable-uploads/ae50567d-7be1-4edf-89b2-402b67673472.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+      <section className="relative h-96 flex items-center justify-center bg-gradient-to-r from-orange-400 to-orange-500 overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10 text-center text-white">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
             QUALITY CONTROL
           </h1>
-          <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
-            overview lorem ipsum dolor sit amet, consectetur adipiscing elit. aliquam aliquam nisl nisl
+          <p className="text-xl mt-4 font-light">
+            Ensuring excellence in every product and process
           </p>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Quality Standards</h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                At Palanche Industries, quality control is at the heart of everything we do. Our rigorous quality assurance processes ensure that every product meets the highest industry standards and exceeds customer expectations.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                We employ advanced testing methodologies, precision measurement tools, and comprehensive inspection protocols to maintain consistency and reliability across our entire product range.
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>ISO 9001:2015 certified quality management system</li>
-                <li>Advanced testing and measurement equipment</li>
-                <li>Comprehensive inspection protocols</li>
-                <li>Continuous improvement processes</li>
-                <li>Skilled quality assurance professionals</li>
-              </ul>
-            </div>
-            <div>
-              <img 
-                src="/lovable-uploads/d97a93e3-8873-4937-a7e9-d321f673d889.png" 
-                alt="Quality Control Equipment"
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Quality Process Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Quality Process</h2>
+          <h2 className="text-3xl font-bold text-blue-600 mb-12 text-center">QUALITY PROCESS</h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="space-y-8">
             <div className="bg-white rounded-lg p-8 shadow-md">
-              <img 
-                src="/lovable-uploads/2a2ebcf0-6f26-4d63-9dd2-8cb4713fb747.png" 
-                alt="Precision Testing"
-                className="w-full h-48 object-cover rounded-lg mb-6"
-              />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Precision Testing</h3>
-              <p className="text-gray-600">
-                State-of-the-art testing equipment ensures every component meets exact specifications and tolerances.
-              </p>
+              <div className="flex items-start space-x-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold text-lg">
+                    1
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">STEP 1</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <img 
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
+                    alt="Quality Step 1"
+                    className="w-32 h-20 object-cover rounded-lg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-md">
+              <div className="flex items-start space-x-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold text-lg">
+                    2
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">STEP 2</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <img 
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
+                    alt="Quality Step 2"
+                    className="w-32 h-20 object-cover rounded-lg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">CERTIFICATIONS</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="text-orange-600" size={48} />
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">ISO CERTIFIED</h3>
+              <p className="text-gray-600">International Organization for Standardization certified processes</p>
             </div>
             
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <img 
-                src="/lovable-uploads/4d239df2-a73b-4466-a274-14ae0806a69d.png" 
-                alt="Material Analysis"
-                className="w-full h-48 object-cover rounded-lg mb-6"
-              />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Material Analysis</h3>
-              <p className="text-gray-600">
-                Comprehensive material analysis and verification processes guarantee optimal performance and durability.
-              </p>
+            <div className="text-center">
+              <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="text-orange-600" size={48} />
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">ISO CERTIFIED</h3>
+              <p className="text-gray-600">Quality management systems compliance</p>
             </div>
             
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <img 
-                src="/lovable-uploads/f41e77b0-c5b7-4a46-8337-239483989c05.png" 
-                alt="Final Inspection"
-                className="w-full h-48 object-cover rounded-lg mb-6"
-              />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Final Inspection</h3>
-              <p className="text-gray-600">
-                Thorough final inspection procedures ensure only the highest quality products reach our customers.
-              </p>
+            <div className="text-center">
+              <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="text-orange-600" size={48} />
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">OTHER</h3>
+              <p className="text-gray-600">Additional industry certifications and standards</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lab Equipment Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-600 mb-4">LAB EQUIPMENT</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-6">
+            <img 
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
+              alt="Lab Equipment 1"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
+              alt="Lab Equipment 2"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
+              alt="Lab Equipment 3"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
+              alt="Lab Equipment 4"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
+            />
           </div>
         </div>
       </section>

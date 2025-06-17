@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="sticky top-0 bg-white shadow-md z-50">
+      <header className="bg-white shadow-sm relative z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
@@ -31,7 +31,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <Link 
                 to="/" 
                 className={`font-medium transition-colors ${
-                  isActive('/') ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700 hover:text-blue-600'
+                  isActive('/') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
                 }`}
               >
                 Home
@@ -39,10 +39,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <Link 
                 to="/products" 
                 className={`font-medium transition-colors ${
-                  isActive('/products') ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700 hover:text-blue-600'
+                  isActive('/products') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
                 }`}
               >
-                Our Projects
+                Products
               </Link>
               <div className="relative group">
                 <button className="font-medium text-gray-700 hover:text-blue-600 transition-colors">
@@ -72,19 +72,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <Link 
                 to="/profile" 
                 className={`font-medium transition-colors ${
-                  isActive('/profile') ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700 hover:text-blue-600'
+                  isActive('/profile') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
                 }`}
               >
                 Profile
               </Link>
             </nav>
-
-            {/* Download Button */}
-            <div className="hidden md:block">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors font-medium">
-                & DOWNLOAD PRODUCT CATALOGUE
-              </button>
-            </div>
 
             {/* Mobile menu button */}
             <button 
@@ -115,7 +108,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     isActive('/products') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
                   }`}
                 >
-                  Our Projects
+                  Products
                 </Link>
                 <div className="pl-4 space-y-2">
                   <p className="font-medium text-gray-900">About Us</p>
@@ -150,9 +143,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 >
                   Profile
                 </Link>
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors font-medium w-full">
-                  & DOWNLOAD PRODUCT CATALOGUE
-                </button>
               </nav>
             </div>
           )}
@@ -183,7 +173,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <h3 className="font-semibold mb-4">Navigation</h3>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors">Our Projects</Link></li>
+                <li><Link to="/products" className="hover:text-white transition-colors">Products</Link></li>
                 <li><Link to="/about-us/quality-control" className="hover:text-white transition-colors">Quality Control</Link></li>
                 <li><Link to="/profile" className="hover:text-white transition-colors">Profile</Link></li>
               </ul>
