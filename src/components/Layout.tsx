@@ -1,6 +1,8 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Facebook, Linkedin, Twitter, Instagram } from 'lucide-react';
+
 const Layout = ({
   children
 }: {
@@ -10,7 +12,8 @@ const Layout = ({
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  return <div className="min-h-screen bg-white">
+
+  return <div className="min-h-screen bg-[#F7F3ED]">
       {/* Header */}
       <header className="bg-white shadow-sm relative z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,51 +93,61 @@ const Layout = ({
       </main>
 
       {/* Footer */}
-      <footer className="text-white py-12 bg-[#f7f3ed]">
+      <footer className="bg-[#F7F3ED] text-black py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Company Info */}
             <div>
-              <img src="/lovable-uploads/2915d7ae-8cc8-4915-8d15-2f92e77c53ed.png" alt="Palanche Industries Logo" className="h-12 w-auto mb-4 filter brightness-0 invert" />
-              <p className="text-gray-400 text-sm">
-                Leading provider of industrial solutions and equipment for modern manufacturing.
+              <div className="flex items-center mb-4">
+                <img src="/lovable-uploads/2915d7ae-8cc8-4915-8d15-2f92e77c53ed.png" alt="Palanche Industries Logo" className="h-8 w-auto mr-3" />
+                <h3 className="text-xl font-bold">Palanche Industries</h3>
+              </div>
+              <p className="text-gray-600 text-sm mb-6">
+                Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua
               </p>
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded transition-colors">
+                Contact Us
+              </button>
             </div>
             
+            {/* Navigation */}
             <div>
-              <h3 className="font-semibold mb-4">Navigation</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors">Products</Link></li>
-                <li><Link to="/about-us/quality-control" className="hover:text-white transition-colors">Quality Control</Link></li>
-                <li><Link to="/profile" className="hover:text-white transition-colors">Profile</Link></li>
+              <h4 className="font-bold mb-4 text-black">Navigation</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">Home</Link></li>
+                <li><Link to="/about-us/quality-control" className="text-gray-600 hover:text-blue-600 transition-colors">About Us</Link></li>
+                <li><Link to="/products" className="text-gray-600 hover:text-blue-600 transition-colors">Our Projects</Link></li>
+                <li><Link to="/profile" className="text-gray-600 hover:text-blue-600 transition-colors">Profile</Link></li>
+                <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Contact Us</a></li>
               </ul>
             </div>
             
+            {/* Connect With Us */}
             <div>
-              <h3 className="font-semibold mb-4">Contact Info</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>Email: info@palanche.com</li>
-                <li>Phone: +1 (555) 123-4567</li>
-                <li>Address: 123 Industrial Blvd</li>
-                <li>City, State 12345</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Connect With Us</h3>
-              <div className="flex space-x-4">
-                <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-sm transition-colors">
-                  Contact Us
-                </button>
+              <h4 className="font-bold mb-4 text-black">Connect With Us</h4>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center text-gray-600">
+                  <Instagram size={16} className="mr-2" />
+                  <span>Instagram</span>
+                </div>
+                <div className="flex items-center text-gray-600">
+                  <Facebook size={16} className="mr-2" />
+                  <span>Facebook</span>
+                </div>
+                <div className="flex items-center text-gray-600">
+                  <Twitter size={16} className="mr-2" />
+                  <span>Twitter</span>
+                </div>
+                <div className="flex items-center text-gray-600">
+                  <Linkedin size={16} className="mr-2" />
+                  <span>LinkedIn</span>
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 Palanche Industries. All rights reserved.</p>
           </div>
         </div>
       </footer>
     </div>;
 };
+
 export default Layout;
