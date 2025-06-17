@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Wind, Building2, Factory } from 'lucide-react';
-
 const Industries = () => {
-  return (
-    <div className="bg-white">
+  return <div className="bg-white">
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center bg-gradient-to-r from-teal-400 to-teal-500 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -19,16 +16,12 @@ const Industries = () => {
         
         {/* Wind turbines background effect */}
         <div className="absolute inset-0 opacity-30">
-          <img 
-            src="https://images.unsplash.com/photo-1472396961693-142e6e269027" 
-            alt="Wind turbines"
-            className="w-full h-full object-cover"
-          />
+          <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027" alt="Wind turbines" className="w-full h-full object-cover" />
         </div>
       </section>
 
       {/* Who We Work With Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-blue-600 mb-12 text-center">WHO WE WORK WITH</h2>
           
@@ -69,7 +62,7 @@ const Industries = () => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">CASE STUDIES</h2>
           
@@ -85,11 +78,7 @@ const Industries = () => {
                 </p>
               </div>
               <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-                  alt="Case Study 1"
-                  className="w-full h-64 object-cover rounded-lg shadow-lg"
-                />
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Case Study 1" className="w-full h-64 object-cover rounded-lg shadow-lg" />
               </div>
             </div>
           </div>
@@ -97,18 +86,14 @@ const Industries = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-orange-500 mb-12 text-center">TESTIMONIALS</h2>
           
           <div className="space-y-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-                  alt="Testimonial 1"
-                  className="w-full h-64 object-cover rounded-lg shadow-lg"
-                />
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Testimonial 1" className="w-full h-64 object-cover rounded-lg shadow-lg" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">CLIENT NAME</h3>
@@ -123,11 +108,7 @@ const Industries = () => {
 
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="md:order-2">
-                <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
-                  alt="Testimonial 2"
-                  className="w-full h-64 object-cover rounded-lg shadow-lg"
-                />
+                <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" alt="Testimonial 2" className="w-full h-64 object-cover rounded-lg shadow-lg" />
               </div>
               <div className="md:order-1">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">CLIENT NAME</h3>
@@ -144,7 +125,7 @@ const Industries = () => {
       </section>
 
       {/* Industries Overview */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Industry Expertise</h2>
@@ -188,8 +169,6 @@ const Industries = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Industries;
