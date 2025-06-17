@@ -1,13 +1,10 @@
-
 import React from 'react';
 import { Building, Cog, Users } from 'lucide-react';
-
 const Infrastructure = () => {
-  return (
-    <div className="bg-white">
+  return <div className="bg-white">
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-orange-400"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
             INFRASTRUCTURE
@@ -19,7 +16,7 @@ const Infrastructure = () => {
       </section>
 
       {/* Plant Overview Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -32,36 +29,20 @@ const Infrastructure = () => {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-                alt="Plant Overview 1"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-                alt="Plant Overview 2"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
-              />
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Plant Overview 1" className="w-full h-48 object-cover rounded-lg shadow-md" />
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Plant Overview 2" className="w-full h-48 object-cover rounded-lg shadow-md" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Machinery Details Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="grid grid-cols-2 gap-4">
-              <img 
-                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
-                alt="Machinery 1"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
-                alt="Machinery 2"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
-              />
+              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" alt="Machinery 1" className="w-full h-48 object-cover rounded-lg shadow-md" />
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Machinery 2" className="w-full h-48 object-cover rounded-lg shadow-md" />
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">MACHINERY DETAILS</h2>
@@ -88,7 +69,7 @@ const Infrastructure = () => {
       </section>
 
       {/* Manufacturing Workflow Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">MANUFACTURING WORKFLOW</h2>
           
@@ -121,35 +102,18 @@ const Infrastructure = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">GALLERY</h2>
           
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              "https://images.unsplash.com/photo-1518770660439-4636190af475",
-              "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-              "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-              "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-              "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-              "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
-              "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-              "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-              "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
-            ].map((image, index) => (
-              <img 
-                key={index}
-                src={image} 
-                alt={`Gallery ${index + 1}`}
-                className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              />
-            ))}
+            {["https://images.unsplash.com/photo-1518770660439-4636190af475", "https://images.unsplash.com/photo-1461749280684-dccba630e2f6", "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7", "https://images.unsplash.com/photo-1498050108023-c5249f4df085", "https://images.unsplash.com/photo-1605810230434-7631ac76ec81", "https://images.unsplash.com/photo-1483058712412-4245e9b90334", "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b", "https://images.unsplash.com/photo-1531297484001-80022131f5a1", "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"].map((image, index) => <img key={index} src={image} alt={`Gallery ${index + 1}`} className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow" />)}
           </div>
         </div>
       </section>
 
       {/* Extrusion Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-blue-600 mb-12 text-center">EXTRUSION PROCESS</h2>
           
@@ -191,8 +155,6 @@ const Infrastructure = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Infrastructure;

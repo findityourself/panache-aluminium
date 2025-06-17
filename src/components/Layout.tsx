@@ -1,8 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Facebook, Linkedin, Twitter, Instagram } from 'lucide-react';
-
 const Layout = ({
   children
 }: {
@@ -12,11 +10,10 @@ const Layout = ({
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
   return <div className="min-h-screen bg-[#F7F3ED]">
       {/* Header */}
       <header className="bg-white shadow-sm relative z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#f7f3ed]">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link to="/" className="flex items-center">
@@ -149,5 +146,4 @@ const Layout = ({
       </footer>
     </div>;
 };
-
 export default Layout;
