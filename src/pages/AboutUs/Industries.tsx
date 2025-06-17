@@ -16,7 +16,7 @@ const Industries = () => {
         
         {/* Wind turbines background effect */}
         <div className="absolute inset-0 opacity-30">
-          <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027" alt="Wind turbines" className="w-full h-full object-cover" />
+          <img alt="Wind turbines" src="/lovable-uploads/67b0fdcf-d227-4acc-83f3-6b6cd05591ba.png" className="" />
         </div>
       </section>
 
