@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const Home = () => {
-  return (
-    <div className="bg-white">
+  return <div className="bg-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -23,18 +20,14 @@ const Home = () => {
       </section>
 
       {/* Logo Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <img 
-            src="/lovable-uploads/2915d7ae-8cc8-4915-8d15-2f92e77c53ed.png" 
-            alt="Palanche Industries Logo" 
-            className="h-32 w-auto mx-auto mb-8"
-          />
+          <img src="/lovable-uploads/2915d7ae-8cc8-4915-8d15-2f92e77c53ed.png" alt="Palanche Industries Logo" className="h-32 w-auto mx-auto mb-8" />
         </div>
       </section>
 
       {/* Short Intro Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-3xl">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">SHORT INTRO</h2>
@@ -49,31 +42,19 @@ const Home = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">CAPABILITIES</h2>
           
           <div className="grid md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-                alt="Capability 1" 
-                className="w-full h-48 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Capability 1" className="w-full h-48 object-cover" />
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-                alt="Capability 2" 
-                className="w-full h-48 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Capability 2" className="w-full h-48 object-cover" />
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-                alt="Capability 3" 
-                className="w-full h-48 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Capability 3" className="w-full h-48 object-cover" />
             </div>
             <div className="bg-orange-400 rounded-lg flex items-center justify-center text-white font-bold text-xl">
               <div className="text-center">
@@ -86,7 +67,7 @@ const Home = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-blue-600 mb-12 text-center">REACH OUT TO US</h2>
           
@@ -95,55 +76,32 @@ const Home = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">EMAIL</label>
-                  <input 
-                    type="email" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your email"
-                  />
+                  <input type="email" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your email" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">PHONE</label>
-                  <input 
-                    type="tel" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your phone"
-                  />
+                  <input type="tel" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your phone" />
                 </div>
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">SUBJECT</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter subject"
-                  />
+                  <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter subject" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">INQUIRY</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Type of inquiry"
-                  />
+                  <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Type of inquiry" />
                 </div>
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">MESSAGE</label>
-                <textarea 
-                  rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Enter your message"
-                ></textarea>
+                <textarea rows={6} className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your message"></textarea>
               </div>
               
               <div className="text-center">
-                <button 
-                  type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition-colors"
-                >
+                <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition-colors">
                   SUBMIT
                 </button>
               </div>
@@ -151,8 +109,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;

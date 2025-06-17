@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { CheckCircle, Award, Shield } from 'lucide-react';
-
 const QualityControl = () => {
-  return (
-    <div className="bg-white">
+  return <div className="bg-white">
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center bg-gradient-to-r from-orange-400 to-orange-500 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -19,7 +16,7 @@ const QualityControl = () => {
       </section>
 
       {/* Quality Process Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-blue-600 mb-12 text-center">QUALITY PROCESS</h2>
           
@@ -38,11 +35,7 @@ const QualityControl = () => {
                   </p>
                 </div>
                 <div className="flex-shrink-0">
-                  <img 
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-                    alt="Quality Step 1"
-                    className="w-32 h-20 object-cover rounded-lg"
-                  />
+                  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Quality Step 1" className="w-32 h-20 object-cover rounded-lg" />
                 </div>
               </div>
             </div>
@@ -61,11 +54,7 @@ const QualityControl = () => {
                   </p>
                 </div>
                 <div className="flex-shrink-0">
-                  <img 
-                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-                    alt="Quality Step 2"
-                    className="w-32 h-20 object-cover rounded-lg"
-                  />
+                  <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Quality Step 2" className="w-32 h-20 object-cover rounded-lg" />
                 </div>
               </div>
             </div>
@@ -74,7 +63,7 @@ const QualityControl = () => {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#f7f3ed]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">CERTIFICATIONS</h2>
           
@@ -107,8 +96,8 @@ const QualityControl = () => {
       </section>
 
       {/* Lab Equipment Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-16 bg-[#f7f3ed]">
+        <div className="max-w-7xl mx-auto px-4 bg-[F7F3ED] bg-[#f7f3ed]">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-blue-600 mb-4">LAB EQUIPMENT</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -117,31 +106,13 @@ const QualityControl = () => {
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
-            <img 
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-              alt="Lab Equipment 1"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
-            <img 
-              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-              alt="Lab Equipment 2"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
-            <img 
-              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
-              alt="Lab Equipment 3"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
-            <img 
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
-              alt="Lab Equipment 4"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Lab Equipment 1" className="w-full h-48 object-cover rounded-lg shadow-md" />
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Lab Equipment 2" className="w-full h-48 object-cover rounded-lg shadow-md" />
+            <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" alt="Lab Equipment 3" className="w-full h-48 object-cover rounded-lg shadow-md" />
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Lab Equipment 4" className="w-full h-48 object-cover rounded-lg shadow-md" />
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default QualityControl;
