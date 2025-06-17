@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { User, Settings, Package, History } from 'lucide-react';
-
 const Profile = () => {
-  return (
-    <div className="bg-gray-50 min-h-screen py-8">
+  return <div className="min-h-screen py-8 bg-[#f7f3ed]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="bg-white rounded-lg shadow-md">
           {/* Profile Header */}
@@ -32,56 +29,32 @@ const Profile = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                      <input 
-                        type="text" 
-                        value="John"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      />
+                      <input type="text" value="John" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                      <input 
-                        type="text" 
-                        value="Smith"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      />
+                      <input type="text" value="Smith" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                     </div>
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                    <input 
-                      type="email" 
-                      value="john.smith@company.com"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
+                    <input type="email" value="john.smith@company.com" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                    <input 
-                      type="tel" 
-                      value="+1 (555) 123-4567"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
+                    <input type="tel" value="+1 (555) 123-4567" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
-                    <input 
-                      type="text" 
-                      value="ABC Manufacturing Corp"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
+                    <input type="text" value="ABC Manufacturing Corp" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Address</label>
-                    <textarea 
-                      rows={3}
-                      value="123 Business Park Drive&#10;Industrial District&#10;City, State 12345"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    ></textarea>
+                    <textarea rows={3} value="123 Business Park Drive&#10;Industrial District&#10;City, State 12345" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
                   </div>
                   
                   <div className="flex space-x-4">
@@ -139,8 +112,6 @@ const Profile = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Profile;
