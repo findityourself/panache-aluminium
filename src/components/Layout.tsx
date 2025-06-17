@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +15,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white shadow-sm relative z-50">
-        {/* Top section with logo and search bars */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
@@ -27,54 +26,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               />
             </Link>
 
-            {/* Search Bars - Desktop */}
-            <div className="hidden lg:flex space-x-4 flex-1 max-w-2xl mx-8">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
-                <input 
-                  type="text" 
-                  placeholder="Search products..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                />
-              </div>
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
-                <input 
-                  type="text" 
-                  placeholder="Search by category..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                />
-              </div>
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
-                <input 
-                  type="text" 
-                  placeholder="Search by industry..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                />
-              </div>
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
-                <input 
-                  type="text" 
-                  placeholder="Quick search..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                />
-              </div>
-            </div>
-
-            {/* Mobile menu button */}
-            <button 
-              onClick={toggleMenu}
-              className="lg:hidden p-2 text-gray-700 hover:text-blue-600"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-
-          {/* Navigation */}
-          <div className="border-t border-gray-200">
-            <nav className="hidden lg:flex space-x-8 py-4">
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex space-x-8">
               <Link 
                 to="/" 
                 className={`font-medium transition-colors ${
@@ -126,77 +79,73 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </Link>
             </nav>
 
-            {/* Mobile Navigation */}
-            {isMenuOpen && (
-              <div className="lg:hidden py-4">
-                {/* Mobile Search */}
-                <div className="mb-4 space-y-2">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
-                    <input 
-                      type="text" 
-                      placeholder="Search..."
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                    />
-                  </div>
-                </div>
-                
-                <nav className="flex flex-col space-y-4">
-                  <Link 
-                    to="/" 
-                    onClick={toggleMenu}
-                    className={`font-medium transition-colors ${
-                      isActive('/') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
-                    }`}
-                  >
-                    Home
-                  </Link>
-                  <Link 
-                    to="/products" 
-                    onClick={toggleMenu}
-                    className={`font-medium transition-colors ${
-                      isActive('/products') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
-                    }`}
-                  >
-                    Products
-                  </Link>
-                  <div className="pl-4 space-y-2">
-                    <p className="font-medium text-gray-900">About Us</p>
-                    <Link 
-                      to="/about-us/quality-control" 
-                      onClick={toggleMenu}
-                      className="block text-gray-700 hover:text-blue-600"
-                    >
-                      Quality Control
-                    </Link>
-                    <Link 
-                      to="/about-us/infrastructure" 
-                      onClick={toggleMenu}
-                      className="block text-gray-700 hover:text-blue-600"
-                    >
-                      Infrastructure
-                    </Link>
-                    <Link 
-                      to="/about-us/industries" 
-                      onClick={toggleMenu}
-                      className="block text-gray-700 hover:text-blue-600"
-                    >
-                      Industries
-                    </Link>
-                  </div>
-                  <Link 
-                    to="/profile" 
-                    onClick={toggleMenu}
-                    className={`font-medium transition-colors ${
-                      isActive('/profile') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
-                    }`}
-                  >
-                    Profile
-                  </Link>
-                </nav>
-              </div>
-            )}
+            {/* Mobile menu button */}
+            <button 
+              onClick={toggleMenu}
+              className="md:hidden p-2 text-gray-700 hover:text-blue-600"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden py-4 border-t border-gray-200">
+              <nav className="flex flex-col space-y-4">
+                <Link 
+                  to="/" 
+                  onClick={toggleMenu}
+                  className={`font-medium transition-colors ${
+                    isActive('/') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Home
+                </Link>
+                <Link 
+                  to="/products" 
+                  onClick={toggleMenu}
+                  className={`font-medium transition-colors ${
+                    isActive('/products') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Products
+                </Link>
+                <div className="pl-4 space-y-2">
+                  <p className="font-medium text-gray-900">About Us</p>
+                  <Link 
+                    to="/about-us/quality-control" 
+                    onClick={toggleMenu}
+                    className="block text-gray-700 hover:text-blue-600"
+                  >
+                    Quality Control
+                  </Link>
+                  <Link 
+                    to="/about-us/infrastructure" 
+                    onClick={toggleMenu}
+                    className="block text-gray-700 hover:text-blue-600"
+                  >
+                    Infrastructure
+                  </Link>
+                  <Link 
+                    to="/about-us/industries" 
+                    onClick={toggleMenu}
+                    className="block text-gray-700 hover:text-blue-600"
+                  >
+                    Industries
+                  </Link>
+                </div>
+                <Link 
+                  to="/profile" 
+                  onClick={toggleMenu}
+                  className={`font-medium transition-colors ${
+                    isActive('/profile') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Profile
+                </Link>
+              </nav>
+            </div>
+          )}
         </div>
       </header>
 
